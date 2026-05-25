@@ -1,0 +1,22 @@
+﻿<Window x:Class="PVZManagerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PVZManager - Главная" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="#F0F0F0">
+            <Button x:Name="btnIssue" Content="Выдача заказов" Height="40" Margin="5" Click="BtnIssue_Click"/>
+            <Button x:Name="btnReceive" Content="Приёмка заказов" Height="40" Margin="5" Click="BtnReceive_Click"/>
+            <Button x:Name="btnReturn" Content="Возвраты / Отказы" Height="40" Margin="5" Click="BtnReturn_Click"/>
+            <Button x:Name="btnCells" Content="Схема ячеек" Height="40" Margin="5" Click="BtnCells_Click"/>
+            <Button x:Name="btnReports" Content="Отчёты / Дашборд" Height="40" Margin="5" Click="BtnReports_Click"/>
+            <Button x:Name="btnLogout" Content="Выход" Height="40" Margin="5" Click="BtnLogout_Click"/>
+        </StackPanel>
+
+        <Frame x:Name="ContentFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

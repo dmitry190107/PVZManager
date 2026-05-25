@@ -1,0 +1,34 @@
+﻿<Window x:Class="PVZManagerWPF.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Авторизация" Height="250" Width="350" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Логин:"/>
+        <TextBox x:Name="txtLogin" Grid.Row="0" Grid.Column="1" Margin="0,5"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Пароль:"/>
+        <PasswordBox x:Name="txtPassword" Grid.Row="1" Grid.Column="1" Margin="0,5"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Роль:"/>
+        <ComboBox x:Name="cboRole" Grid.Row="2" Grid.Column="1" Margin="0,5">
+            <ComboBoxItem Content="администратор"/>
+            <ComboBoxItem Content="оператор"/>
+            <ComboBoxItem Content="кладовщик"/>
+        </ComboBox>
+
+        <Button x:Name="btnLogin" Grid.Row="3" Grid.ColumnSpan="2" Content="Войти" Width="100" Height="30" Margin="0,20,0,0" HorizontalAlignment="Center" Click="BtnLogin_Click"/>
+        <TextBlock x:Name="txtError" Grid.Row="4" Grid.ColumnSpan="2" Foreground="Red" TextAlignment="Center" Margin="0,10"/>
+    </Grid>
+</Window>

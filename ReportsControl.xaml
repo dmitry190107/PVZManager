@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="PVZManagerWPF.ReportsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="lblToday" FontSize="14" FontWeight="Bold" Margin="0,0,0,10"/>
+        <DataGrid x:Name="dgvStats" Grid.Row="1" AutoGenerateColumns="True" IsReadOnly="True"/>
+    </Grid>
+</UserControl>
